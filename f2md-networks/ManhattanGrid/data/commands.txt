@@ -1,0 +1,1 @@
+/home/dkara/Desktop/v2x/F2MD/Programs/sumo-1.5.0/tools/randomTrips.py -n net.net.xml -o flows.xml --begin 0 --end 1 --flows 100 --jtrrouter --trip-attributes departPos="random" departSpeed="max"
