@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<AnalogueModels>
+<AnalogueModel type="SimplePathlossModel" thresholding="true">
+<parameter name="alpha" type="double" value="2.0"/>
+</AnalogueModel>
+</AnalogueModels>
+
+
+Use below with new buildings
+
+<AnalogueModel type="SimpleObstacleShadowing">
+<parameter name="carrierFrequency" type="double" value="5.890e+9"/>
+<obstacles>
+<type db-per-cut="9" db-per-meter="0.4" id="building"/>
+</obstacles>
+</AnalogueModel>
+-->
+<root>
+	<AnalogueModel type="TwoRayInterferenceModel">
+		<parameter name="DielectricConstant" type="double" value="1.02" />
+		<parameter name="alpha" type="double" value="2.0" />
+		<parameter name="carrierFrequency" type="double" value="5.890e+9" />
+	</AnalogueModel>
+	<AnalogueModel type="VehicleObstacleShadowing" thresholding="true">
+		<parameter name="carrierFrequency" type="double" value="5.890e+9" />
+	</AnalogueModel>
+	<Decider type="Decider80211p">
+		<!-- The center frequency on which the phy listens -->
+		<parameter name="centerFrequency" type="double" value="5.890e9" />
+	</Decider>
+</root>
